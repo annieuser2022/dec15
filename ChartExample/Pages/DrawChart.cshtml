@@ -1,0 +1,33 @@
+﻿@page
+@model ChartExample.Pages.DrawChartModel
+
+<div>
+    @{
+
+    }
+    <script type="text/javascript">
+        window.onload = function () {
+            var myChart = new CanvasJS.Chart("chartContainer",
+                {
+                    title:
+                    {
+                        text: "Car sales in November"
+                    },
+                    data:
+                        [{
+                            type: "column",
+                            dataPoints: [
+                                { label: "Toyota", y: 15 },
+                                { label: "Hyundai", y: 16 },
+                                { label: "Mitsu", y: 17 },
+                                { label: "Honda", y: 18 }
+                            ]
+                        }
+                        ]
+                }
+            );
+            myChart.render();
+        }
+    </script>
+</div>
+
